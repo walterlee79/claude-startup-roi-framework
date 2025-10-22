@@ -19,7 +19,7 @@ Why this exists (for Anthropic): Anthropic’s startup program needs to allocate
 An interactive ROI prediction framework that helps the Anthropic Startup Ecosystem team make more scientific credit allocation decisions.
 This project demonstrates how the Startup Platform Operations / Account Manager role would approach the problem with a concrete deliverable.
 
-Calibration note: The calculation engine was sanity-checked / calibrated using a B2B SaaS (Polymerize) case with real metrics/assumptions.
+Calibration note: The calculation engine was sanity-checked / calibrated using a B2B SaaS Startup case with real metrics/assumptions.
 An illustrative result of 1,532% probability-weighted ROI was produced, but it is assumption-sensitive and presented for illustration.
 
 ## 🧮 How it works (short)
