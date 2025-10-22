@@ -7,7 +7,7 @@ _Data-driven credit allocation for Anthropic’s Startup Ecosystem_
 
 [![Live Demo](https://img.shields.io/badge/Live%20Demo-Streamlit-blue)](https://claude-startup-roi-framework-rclvgwxgynst2pepcm5ywm.streamlit.app/) ![License](https://img.shields.io/badge/License-MIT-green)
 
-Why this exists (for Anthropic): Anthropic’s startup program needs to allocate limited Claude API credits** to maximize portfolio-level value**. This framework shifts from qualitative assessments to a quantitative model that quickly estimates and compares which teams convert credits into value (ROI) most efficiently.
+Why this exists (for Anthropic): Anthropic’s startup program needs to allocate limited Claude API credits **to maximize portfolio-level value**. This framework shifts from qualitative assessments to a quantitative model that quickly estimates and compares which teams convert credits into value (ROI) most efficiently.
 
 > Live Demo: click the badge above or click the link as below
 > https://claude-startup-roi-framework-rclvgwxgynst2pepcm5ywm.streamlit.app/ 
@@ -64,12 +64,15 @@ PRs welcome—everything from small README tweaks to new features.
 ## ❓ FAQ
 
 Q. Is the Polymerize 1,532% figure guaranteed?
+>>
 A. No. It is an illustrative example based on public assumptions. Results vary by team/domain/workflow. The model supports assumption sensitivity analysis.
 
 Q. How do I read the sensitivity heatmap?
+>>
 A. Darker areas indicate larger ROI swings. Use it to decide which levers to tune first.
 
 Q. Can I use private data?
+>>
 A. Yes for local runs. Before sharing, please remove/obfuscate sensitive details.
 
 ## 📄 License
