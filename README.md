@@ -1,17 +1,19 @@
 # claude-startup-roi-framework
 
+
 This is an interactive ROI prediction framework designed for Anthropic's Startup Ecosystem team. It empowers data-driven decisions by quantifying which startups will generate the most value from Claude API credits.
 
 🔗 Live Demo link : https://claude-startup-roi-framework-rclvgwxgynst2pepcm5ywm.streamlit.app/
 
-A screenshot of the live dashboard is highly recommended here.
+<img width="1893" height="827" alt="Screen Shot 2025-10-22 at 1 46 35 PM" src="https://github.com/user-attachments/assets/b55f711b-052e-4b62-ba92-2489d8ccc385" />
 
+>>
+>>
 🎯 Project Goal & Background
+
 A key challenge for Anthropic's startup program is allocating limited Claude API credits to maximize value across the entire portfolio. This requires moving beyond qualitative assessments to a quantitative framework that can forecast the potential impact of a credit grant.
 
-I proactively built this project to address that specific challenge. It's a tangible demonstration of how I would approach the problems and responsibilities of the Startup Platform Operations and Account Manager roles at Anthropic.
-
-To ensure real-world accuracy, the framework's entire calculation engine is validated against the Polymerize case study—a B2B SaaS startup that achieved a remarkable 1,532% probability-weighted ROI by implementing Claude.
+To ensure real-world accuracy, the framework's entire calculation engine is validated against the case study— one of startup that achieved a remarkable 1,532% probability-weighted ROI by implementing Claude.
 
 ✨ Key Features
 📊 Interactive Streamlit Dashboard: Allows for real-time parameter adjustments to intuitively simulate ROI outcomes on the web.
