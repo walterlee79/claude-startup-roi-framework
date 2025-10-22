@@ -1,70 +1,119 @@
-# claude-startup-roi-framework
+# Claude Startup ROI Framework  
+_Data-driven credit allocation for Anthropic’s Startup Ecosystem_
+
+<img width="1893" height="827" alt="Screen Shot 2025-10-22 at 1 46 35 PM" src="https://github.com/user-attachments/assets/88bc881e-58b0-46f7-8df6-1415129458f9" />
+
+---
+
+[![Live Demo](https://img.shields.io/badge/Live%20Demo-Streamlit-blue)](https://claude-startup-roi-framework-rclvgwxgynst2pepcm5ywm.streamlit.app/) ![License](https://img.shields.io/badge/License-MIT-green)
+
+Why this exists (for Anthropic): Anthropic’s startup program needs to allocate limited Claude API credits** to maximize portfolio-level value**. This framework shifts from qualitative assessments to a quantitative model that quickly estimates and compares which teams convert credits into value (ROI) most efficiently.
+
+> Live Demo: click the badge above or click the link as below
+> https://claude-startup-roi-framework-rclvgwxgynst2pepcm5ywm.streamlit.app/ 
+
+---
+
+## 🎯 Project Goal & Background
+
+An interactive ROI prediction framework that helps the Anthropic Startup Ecosystem team make more scientific credit allocation decisions.
+This project demonstrates how the Startup Platform Operations / Account Manager role would approach the problem with a concrete deliverable.
+
+Calibration note: The calculation engine was sanity-checked / calibrated using a B2B SaaS (Polymerize) case with real metrics/assumptions.
+An illustrative result of 1,532% probability-weighted ROI was produced, but it is assumption-sensitive and presented for illustration.
+
+## 🧮 How it works (short)
+
+ROI = (Expected Benefit − Total Cost) ÷ Total Cost
+
+Expected Benefit = Σᵢ [ pᵢ × benefitᵢ ] for scenarios i ∈ {Conservative, Expected, Upside} with Σ pᵢ = 1
+
+Costs = One-time implementation + monthly run-rate (credits/headcount/tools)
+
+Adoption = S-Curve to reflect ramp-up and onboarding periods
+
+Outputs = Payback month, PW-ROI%, 12M cumulative value curve, sensitivity heatmaps, monthly breakdown
+
+## 🖥️ Usage (at a glance)
+
+In the web dashboard, adjust API credits, automation rate, revenue attribution, error cost, hourly headcount rates, etc., and observe results live.
+
+Use the “Most sensitive levers” section to prioritize which variables to optimize first.
+
+**📎 Example Questions it Answers
+**
+Which startup is most likely to create greater value/ROI with the same credits?
+
+What is the payback month, and what is the 12-month cumulative value?
+
+Among credit size / automation rate / revenue attribution, which lever is most sensitive?
 
 
-This is an interactive ROI prediction framework designed for Anthropic's Startup Ecosystem team. It empowers data-driven decisions by quantifying which startups will generate the most value from Claude API credits.
+## 🧪 Roadmap
 
-🔗 Live Demo link : https://claude-startup-roi-framework-rclvgwxgynst2pepcm5ywm.streamlit.app/
+CSV/PNG Export buttons
 
-<img width="1893" height="827" alt="Screen Shot 2025-10-22 at 1 46 35 PM" src="https://github.com/user-attachments/assets/b55f711b-052e-4b62-ba92-2489d8ccc385" />
+Side-by-side What-if comparisons
 
->>
->>
-🎯 Project Goal & Background
+Portfolio view (compare N startups simultaneously)
 
-A key challenge for Anthropic's startup program is allocating limited Claude API credits to maximize value across the entire portfolio. This requires moving beyond qualitative assessments to a quantitative framework that can forecast the potential impact of a credit grant.
+Monte Carlo option (assumption distributions)
 
-To ensure real-world accuracy, the framework's entire calculation engine is validated against the case study— one of startup that achieved a remarkable 1,532% probability-weighted ROI by implementing Claude.
+PRs welcome—everything from small README tweaks to new features.
 
-✨ Key Features
-📊 Interactive Streamlit Dashboard: Allows for real-time parameter adjustments to intuitively simulate ROI outcomes on the web.
+## ❓ FAQ
 
-⚖️ Probability-Weighted Scenario Analysis: Forecasts ROI based on Conservative, Expected, and Upside scenarios to support realistic, risk-adjusted decision-making.
+Q. Is the Polymerize 1,532% figure guaranteed?
+A. No. It is an illustrative example based on public assumptions. Results vary by team/domain/workflow. The model supports assumption sensitivity analysis.
 
-📈 ROI Curve & Adoption Modeling: Visualizes the 12-month cumulative value against costs and models technology adoption with an S-Curve to clearly identify the payback period.
+Q. How do I read the sensitivity heatmap?
+A. Darker areas indicate larger ROI swings. Use it to decide which levers to tune first.
 
-🎯 Sensitivity Analysis Heatmaps: Generates heatmaps to analyze how ROI is impacted by key variables like API Credit Amount, Automation Potential, and Revenue Attribution, identifying the most critical levers for success.
+Q. Can I use private data?
+A. Yes for local runs. Before sharing, please remove/obfuscate sensitive details.
 
-📋 Detailed Monthly Breakdown: Provides a transparent, month-by-month breakdown of value components—including Labor Savings, Error Reduction, and Revenue Impact—to substantiate the final ROI calculation.
+## 📄 License
 
-🛠️ Tech Stack
-Language: Python
-
-Framework: Streamlit
-
-Libraries: Pandas, NumPy, Plotly
-
-Deployment: Streamlit Community Cloud
+MIT License — see LICENSE.
 
 
-1. Clone the Repository
-   
+---
+
+
+## ✨ What it does
+- **📊 Interactive Streamlit Dashboard** — Adjust parameters and see **real-time** ROI simulations  
+- **⚖️ Probability-Weighted Scenarios** — **Conservative / Expected / Upside** with probability-weighted ROI  
+- **📈 Adoption & Payback** — 12-month cumulative value vs. cost, **S-Curve adoption** to visualize payback timing  
+- **🎯 Sensitivity Heatmaps** — Analyze levers like API credits, automation potential, and revenue attribution  
+- **📋 Monthly Roll-up** — Transparent month-by-month breakdown of labor savings, error reduction, and revenue impact  
+- **🧰 Tech** — Python · Streamlit · Pandas · NumPy · Plotly (Deploy: Streamlit Community Cloud)
+
+---
+
+## 🚀 Quickstart
+
+```bash
+# 1) Clone
 git clone https://github.com/walterlee79/claude-startup-roi-framework.git
 cd claude-startup-roi-framework
 
-2. Install Dependencies
-
+# 2) Install
+python -m venv .venv && source .venv/bin/activate   # Windows: .venv\Scripts\activate
+pip install -U pip
 pip install -r requirements.txt
 
-3. Run the Streamlit App
-This command will launch the web application on your local machine.
-
-Bash
-
+# 3) Run (local)
 streamlit run app.py
-You can then access the dashboard by navigating to the localhost address provided in your terminal.
+# → Open the localhost address printed in your terminal
 
-📁 Project Structure
+---
+
+🗂️ Project Structure
 .
 ├── .streamlit/
-│   └── config.toml      # Streamlit theme and server configuration
+│   └── config.toml           # Streamlit theme/server config
 ├── src/
-│   └── roi_engine.py    # Core ROI calculation engine
-├── app.py               # Main Streamlit dashboard application
-├── README.md            # Project overview and documentation
-└── requirements.txt     # Python dependencies
-
-📄 License
-
-This project is licensed under the MIT License. See the LICENSE file for more details.
-
-
+│   └── roi_engine.py         # Core ROI calculation engine
+├── app.py                    # Main Streamlit app
+├── README.md                 # Docs
+└── requirements.txt          # Dependencies
